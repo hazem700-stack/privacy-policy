@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SafeShield — Privacy Policy / سياسة الخصوصية</title>
+<style>
+  body { font-family: system-ui, -apple-system, "Segoe UI", Tahoma, sans-serif; margin: 0;
+         background: #f6f7f9; color: #1c1e21; line-height: 1.7; }
+  main, header, footer { max-width: 780px; margin: 0 auto; padding: 0 20px; }
+  header { padding-top: 28px; }
+  header h1 { font-size: 1.5rem; margin: 0 0 6px; }
+  nav a { margin-inline-end: 14px; }
+  section { background: #fff; border: 1px solid #e3e5e8; border-radius: 10px;
+             padding: 8px 26px 26px; margin: 22px 0; }
+  h2 { font-size: 1.12rem; margin-top: 1.6em; border-bottom: 1px solid #eceef0; padding-bottom: 4px; }
+  table { border-collapse: collapse; width: 100%; margin: 12px 0; font-size: .95rem; }
+  th, td { border: 1px solid #dfe2e6; padding: 7px 10px; text-align: start; vertical-align: top; }
+  th { background: #eef1f4; }
+  code { background: #eef1f4; padding: 1px 5px; border-radius: 4px; font-size: .9em; }
+  footer { padding: 18px 20px 34px; font-size: .88rem; color: #5a6470; }
+</style>
+</head>
+<body>
+<header>
+  <h1>SafeShield — Privacy Policy · سياسة الخصوصية</h1>
+  <nav><a href="#ar">العربية</a><a href="#en">English</a></nav>
+</header>
+<main>
+<section id="ar" lang="ar" dir="rtl">
+<h1>سياسة الخصوصية — درع الحماية (SafeShield)</h1>
+<p><strong>آخر تحديث:</strong> 21 سبتمبر 2026</p>
+<p><strong>المطوّر:</strong> HazemFawzy</p>
+<p><strong>للتواصل:</strong> https://github.com/HazemFawzy</p>
+<p>هذه السياسة تشرح — بلغة واضحة — كيف يتعامل تطبيق <strong>درع الحماية</strong> مع بياناتك. الخلاصة أصلًا بسيطة: <strong>التطبيق لا يجمع أي بيانات عنك، ولا يشارك أي شيء معنا أو مع أي طرف آخر.</strong></p>
+<h2>1) الخلاصة في أسطر</h2>
+<ul><li>كل قوائمك وعدّاداتك تُخزَّن وتُعالَج <strong>داخل جهازك فقط</strong>.</li><li>الاتصال الشبكي الوحيد الذي يُجريه التطبيق هو <strong>تمرير استعلامات النطاقات (DNS) المسموحة</strong> إلى مُحلِّل DNS عام (Cloudflare — العنوان <code>1.1.1.1</code>) ليعود بجوابها. النطاقات المحجوبة <strong>لا تُرسَل إلى أي مكان إطلاقًا</strong>.</li><li>لا حساب، لا تسجيل دخول، لا تحليلات، لا إعلانات، لا أدوات تتبّع، ولا أي حزمة برمجية من طرف ثالث داخل التطبيق.</li><li>إلغاء تثبيت التطبيق يحذف كل ما يتعلق به نهائيًا — لا يوجد شيء عندنا يمكن حذفه أو طلب حذفه.</li></ul>
+<h2>2) المعلومات التي تُعالَج على جهازك (ولا تغادره)</h2>
+<p>يعمل التطبيق بالكامل على جهازك، ويخزّن ما يلي في ملف داخل مساحة التطبيق الخاصة (<code>filesDir</code>) — وهي منطقة لا يستطيع أي تطبيق آخر قراءتها:</p>
+<table>
+<thead><tr><th>البيان</th><th>الغرض</th><th>هل يغادر الجهاز؟</th></tr></thead>
+<tbody>
+<tr><td>قوائم الحجب والسماح التي تُدخلها</td><td>أساس قرار الحجب</td><td><strong>لا</strong></td></tr>
+<tr><td>عدّاد اليوم المحجوب + إجمالي الاستعلامات</td><td>عرض العدّاد الصادق</td><td><strong>لا</strong></td></tr>
+<tr><td>ختم التاريخ لإعادة تصفير عدّاد اليوم</td><td>صحة العدّاد اليومي</td><td><strong>لا</strong></td></tr>
+</tbody>
+</table>
+<ul><li>هذا الملف محلي بحت؛ كما عطّلنا النسخ الاحتياطي السحابي للتطبيق (<code>allowBackup=false</code>)، فلا يُرفع حتى مع نسخ أندرويد الاحتياطية.</li><li><strong>المعالجة نفسها محلية:</strong> قرار حجب أو سماح لكل نطاق يُتخذ داخل جهازك. يدعم التطبيق قوائم بصيغة <code>hosts</code> (المتوافقة مع قوائم مثل StevenBlack)، وأي قائمة من هذا النوع تُعالَج نصيًا على الجهاز — التطبيق لا يُنزّل أي شيء من الإنترنت بنفسه.</li></ul>
+<h2>3) النشاط الشبكي الوحيد — يجب أن يكون صريحًا</h2>
+<ul><li>عندما يكون الحماية مفعّلة، يمرّ كل استعلام DNS من جهازك عبر نفق محلي (VpnService) داخل التطبيق.</li><li><strong>النطاقات المحجوبة:</strong> يرد عليها التطبيق محليًا بجواب "غير موجود" (NXDOMAIN) — <strong>هذه الطلبات لا تخرج من جهازك أبدًا ولا يراها أي طرف خارجي.</strong></li><li><strong>النطاقات المسموحة:</strong> يمرّرها التطبيق إلى مُحلِّل DNS عام هو <strong>Cloudflare (<code>1.1.1.1</code>)</strong> عبر UDP قياسي — أي أن اسم النطاق الذي تزوره (المسموح منه) يصل إلى Cloudflare، كما يصل اليوم إلى مزوّد الإنترنت في الوضع العادي. لا يُرسَل شيء غير استعلام DNS نفسه؛ لا محتوى صفحات، لا بيانات تطبيقات، ولا شيء آخر.</li><li>لا يوجد أي خادم يخصنا في هذه المعادلة: لا نرى استعلاماتك، ولا نستطيع ربطها بك.</li><li>التطبيق لا يحتوي ولا يتصل بأي خدمة تحليلات أو إعلانات أو إبلاغ عن أعطال، ولا يستخدم أي معرّفات إعلانية أو تتبّع.</li></ul>
+<h2>4) الصلاحيات ولماذا نحتاجها</h2>
+<p>يطلب التطبيق <strong>خمس صلاحيات</strong> فقط، ولا يستخدم Accessibility ولا Device Admin ولا أي صلاحية مراقبة:</p>
+<table>
+<thead><tr><th>الصلاحية</th><th>لماذا</th></tr></thead>
+<tbody>
+<tr><td><strong>INTERNET</strong></td><td>تمرير استعلامات DNS المسموحة إلى <code>1.1.1.1</code> — لا شيء غيره</td></tr>
+<tr><td><strong>FOREGROUND_SERVICE</strong> + <strong>FOREGROUND_SERVICE_SPECIAL_USE</strong></td><td>إبقاء خدمة الفلترة حيّة أمام المستخدم عبر إشعار الحالة الدائم</td></tr>
+<tr><td><strong>POST_NOTIFICATIONS</strong></td><td>عرض إشعار الحالة الدائم (متطلب نظام للخدمة الأمامية)</td></tr>
+<tr><td><strong>RECEIVE_BOOT_COMPLETED</strong></td><td>ليعمل خيار "Always-on VPN" بعد إعادة تشغيل الجهاز؛ إعادة التشغيل الفعلية تديرها أندرويد نفسها عبر ميزة Always-on</td></tr>
+</tbody>
+</table>
+<ul><li><strong>إذن الـ VPN:</strong> عند أول تشغيل يعرض أندرويد نافذة نظامها ("طلب اتصال VPN") لتمنح الإذن بنفسك — لا يستطيع التطبيق إنشاء النفق بدون موافقتك الصريحة. وظيفتها الأساسية المعلَنة للنظام: اعتراض استعلامات النطاقات وفحصها مقابل قوائمك — فلترة محتوى محلية: لا يُمرَّر شيء ولا يُحتفَظ بأي بيانات.</li><li>يمكن سحب الإذن في أي وقت من إعدادات أندرويد (VPN) أو بإيقاف المفتاح — يتوقف الاعتراض فورًا.</li></ul>
+<h2>5) ما لا نفعله — صراحةً</h2>
+<ul><li>لا نجمع ولا نشارك ولا نبيع أي بيانات — لأي غرض.</li><li>لا ننشئ حسابات ولا نطلب بريدًا أو هاتفًا.</li><li>لا نرى شاشتك ولا نقرأ إشعاراتك ولا نحلل استخدامك لأي تطبيق آخر.</li><li>لا نمنعك من إزالة التطبيق أو إيقافه.</li><li>لا نستخدم معرّفات تتبّع ولا نربط الجهاز بهوية.</li></ul>
+<h2>6) الاحتفاظ بالبيانات وحذفها</h2>
+<ul><li>كل ما يخزّنه التطبيق محلي في ملف واحد داخل مساحته الخاصة، ويعيش طوال تنصيبه فقط.</li><li><strong>حذف كل شيء = إلغاء التثبيت.</strong> تُمحى القوائم والعدّادات نهائيًا، ولا يوجد لدى المطوّر أي نسخة منها — فلا حاجة لطلب حذف منا، ولا نستطيع استعادتها.</li><li>إيقاف المفتاح يوقف الاعتراض، لكنه لا يحذف القوائم؛ إلغاء التثبيت هو الحذف الكامل.</li></ul>
+<h2>7) الأطفال</h2>
+<p>التطبيق أداة فلترة قد يستخدمها وليّ الأمر لحماية أفراد أسرته، لكنه <strong>لا يجمع أي بيانات عن أي مستخدم — طفلًا كان أم لا</strong> — فلا يوجد أي شيء "نجمعه من الأطفال" أصلًا. لا يوجَّه التطبيق لجمع بيانات من دون 13 عامًا ولا يفعل ذلك.</p>
+<h2>8) أطراف ثالثة</h2>
+<p>الطرف الثالث الوحيد المتصل به التطبيق هو <strong>Cloudflare</strong> بصفتها مُحلِّل DNS العام (<code>1.1.1.1</code>) الذي تعالج استعلاماتك المسموحة وفق سياقها الخاص. لا يوجد أي طرف ثالث آخر — لا SDK، لا تحليلات، لا مزوّد دفع، لا قوائم تُنزَّل من الإنترنت عبر التطبيق.</p>
+<h2>9) حقوقك وأدواتك</h2>
+<p>بما أنه لا توجد بيانات لنا عنك، فمعظم طلبات الخصوصية التقليدية (الوصول، التصحيح، الحذف، النقل) تُجاب بالكامل بجهازك نفسه: قوائمك بين يديك، وحذفها كلي بإلغاء التثبيت. لأي استفسار: https://github.com/HazemFawzy.</p>
+<h2>10) التغييرات على هذه السياسة</h2>
+<p>إن تغيّر سلوك التطبيق جمعًا أو مشاركة، سنحدّث هذه السياسة ونرفع رقم الإصدار في المتجر قبل نشر التغيير، ونشرح الفرق بوضوح. <strong>الالتزام الثابت:</strong> يبقى التطبيق بلا جمع ولا مشاركة ما دامت معماريتها كما هي — كل شيء على الجهاز.</p>
+<h2>11) التواصل</h2>
+<p>HazemFawzy — https://github.com/HazemFawzy</p>
+<hr>
+</section>
+<section id="en" lang="en" dir="ltr">
+<h1>Privacy Policy — SafeShield (درع الحماية)</h1>
+<p><strong>Last updated:</strong> September 21, 2026</p>
+<p><strong>Developer:</strong> HazemFawzy</p>
+<p><strong>Contact:</strong> https://github.com/HazemFawzy</p>
+<p>This policy explains — in plain language — how the <strong>SafeShield</strong> app handles your data. The summary is simple: <strong>the app collects no data about you and shares nothing with us or anyone else.</strong></p>
+<h2>1) The short version</h2>
+<ul><li>Your lists and counters are stored and processed <strong>on your device only</strong>.</li><li>The only network connection the app makes is <strong>forwarding permitted DNS queries</strong> to a public DNS resolver (Cloudflare — <code>1.1.1.1</code>) and passing its answer back. Blocked domains are <strong>never sent anywhere</strong>.</li><li>No account, no sign-up, no analytics, no ads, no trackers, and no third-party software libraries inside the app.</li><li>Uninstalling the app permanently deletes everything related to it — there is nothing on our side to delete or request deletion of.</li></ul>
+<h2>2) Information processed on your device (and never leaving it)</h2>
+<p>The app runs entirely on your device and stores the following in a file inside the app's private storage (<code>filesDir</code>) — an area no other app can read:</p>
+<table>
+<thead><tr><th>Item</th><th>Purpose</th><th>Leaves the device?</th></tr></thead>
+<tbody>
+<tr><td>Block and allow lists you enter</td><td>The basis of every blocking decision</td><td><strong>No</strong></td></tr>
+<tr><td>Today's blocked counter + total query count</td><td>Displaying the honest counter</td><td><strong>No</strong></td></tr>
+<tr><td>Date stamp for resetting the daily counter</td><td>Daily-counter correctness</td><td><strong>No</strong></td></tr>
+</tbody>
+</table>
+<ul><li>This file is purely local; we also disabled cloud backup for the app (<code>allowBackup=false</code>), so it is not uploaded even with Android backups.</li><li><strong>The processing itself is local:</strong> the block-or-allow decision for every domain is made on your device. The app supports <code>hosts</code>-format lists (compatible with lists such as StevenBlack); any such list is processed as text on the device — the app does not download anything from the internet by itself.</li></ul>
+<h2>3) The only network activity — stated plainly</h2>
+<ul><li>When protection is on, all DNS queries from your device pass through a local tunnel (VpnService) inside the app.</li><li><strong>Blocked domains:</strong> the app answers locally with "not found" (NXDOMAIN) — <strong>these requests never leave your device and no outside party sees them.</strong></li><li><strong>Permitted domains:</strong> the app forwards them to the public DNS resolver <strong>Cloudflare (<code>1.1.1.1</code>)</strong> over standard UDP — meaning the domain name you visit (from the permitted set) reaches Cloudflare, the same way it reaches your ISP in normal operation. Nothing other than the DNS query itself is sent: no page content, no app data, nothing else.</li><li>There is no server of ours in this equation: we never see your queries and cannot associate them with you.</li><li>The app contains and connects to <strong>no analytics, advertising, or crash-reporting service</strong>, and uses no advertising or tracking identifiers.</li></ul>
+<h2>4) Permissions and why we need them</h2>
+<p>The app requests <strong>five permissions only</strong>. It uses no Accessibility, no Device Admin, and no monitoring permission of any kind:</p>
+<table>
+<thead><tr><th>Permission</th><th>Why</th></tr></thead>
+<tbody>
+<tr><td><strong>INTERNET</strong></td><td>Forwarding permitted DNS queries to <code>1.1.1.1</code> — nothing else</td></tr>
+<tr><td><strong>FOREGROUND_SERVICE</strong> + <strong>FOREGROUND_SERVICE_SPECIAL_USE</strong></td><td>Keeping the filtering service alive and visible through the ongoing status notification</td></tr>
+<tr><td><strong>POST_NOTIFICATIONS</strong></td><td>Showing the ongoing status notification (required by Android for a foreground service)</td></tr>
+<tr><td><strong>RECEIVE_BOOT_COMPLETED</strong></td><td>So the "Always-on VPN" option survives device restarts; the actual restart is handled by Android itself through the Always-on feature</td></tr>
+</tbody>
+</table>
+<ul><li><strong>VPN permission:</strong> on first start, Android shows its own system dialog ("Connection request") so <strong>you</strong> grant the VPN permission — the app cannot create the tunnel without your explicit consent. Its declared core function: intercepting DNS queries and checking them against your lists — local content filtering with nothing proxied or retained.</li><li>You can revoke it anytime from Android Settings (VPN) or by flipping the switch — interception stops immediately.</li></ul>
+<h2>5) What we do NOT do — explicitly</h2>
+<ul><li>We do not collect, share, or sell any data — for any purpose.</li><li>We do not create accounts or ask for email or phone numbers.</li><li>We cannot see your screen, read your notifications, or analyze your use of any other app.</li><li>We do not prevent you from uninstalling or stopping the app.</li><li>We use no tracking identifiers and never link a device to an identity.</li></ul>
+<h2>6) Data retention and deletion</h2>
+<ul><li>Everything the app stores is local, in a single file inside its private storage, and lives only while the app is installed.</li><li><strong>Deleting everything = uninstalling.</strong> Lists and counters are permanently erased, and the developer holds no copy — there is nothing to request from us, and nothing we could restore.</li><li>Turning the switch off stops interception but does not delete your lists; uninstalling is the complete deletion.</li></ul>
+<h2>7) Children</h2>
+<p>The app is a filtering tool that a guardian may use to protect their household, but it <strong>collects no data from any user — child or adult</strong> — so there is nothing "collected from children" to begin with. The app is not directed at collecting data from anyone under 13 and does not do so.</p>
+<h2>8) Third parties</h2>
+<p>The only third party the app connects to is <strong>Cloudflare</strong>, as the public DNS resolver (<code>1.1.1.1</code>) that processes your permitted queries under its own terms. There is no other third party — no SDK, no analytics, no payment processor, and the app downloads no lists from the internet.</p>
+<h2>9) Your rights and controls</h2>
+<p>Since we hold no data about you, most traditional privacy requests (access, correction, deletion, portability) are answered by your device itself: your lists are in your hands, and uninstalling removes all of them. For any question: https://github.com/HazemFawzy.</p>
+<h2>10) Changes to this policy</h2>
+<p>If the app's collection or sharing behavior ever changes, we will update this policy and bump the version in the store before shipping the change, explaining the difference clearly. <strong>Standing commitment:</strong> the app remains no-collect / no-share as long as its architecture stays on-device.</p>
+<h2>11) Contact</h2>
+<p>HazemFawzy — https://github.com/HazemFawzy</p>
+<hr>
+</section>
+</main>
+<footer>
+  This page is the official privacy policy for the Android app <strong>SafeShield (درع الحماية)</strong> —
+  package <code>com.safeshield.shield</code>. ·
+  <a href="https://github.com/HazemFawzy">Contact</a>
+</footer>
+</body>
+</html>
